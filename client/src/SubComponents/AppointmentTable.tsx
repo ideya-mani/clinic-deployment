@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, MenuItem, Select, FormControl, InputLabel, Box, Typography } from '@mui/material';
-import axios from 'axios';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, MenuItem, Select, FormControl, Box, Typography } from '@mui/material';
 import { getAppointments, updateAppointmentStatus } from '../services/services';
 
 const AppointmentTable: React.FC = () => {
