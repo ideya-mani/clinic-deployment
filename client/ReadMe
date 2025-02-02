@@ -1,0 +1,6 @@
+Install react-i18next for internationalization (i18n): This is a powerful and flexible internationalization library for React.
+npm install react-i18next i18next
+
+Ensure each page and component is using the useTranslation hook to dynamically update text based on the selected language.
+When you select a different language in the Header.tsx, all the components will automatically update the text according to the translations provided in your JSON files (en.json, es.json, etc.).
+The t('key') function will replace the static text with the appropriate translation
