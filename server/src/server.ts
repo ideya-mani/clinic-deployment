@@ -7,12 +7,14 @@ import adminRoutes from './routes/adminRoutes';
 import authRoutes from './routes/authRoutes';
 // import timelineRoutes from './routes/timelineRoutes';
 import postRoutes from './routes/postRoutes';
-import contactRoutes from './routes/contactRoutes'
+import contactRoutes from './routes/contactRoutes';
 
 dotenv.config();
 
 const app = express();
-// const port = 5000;
+
+// Use the dynamic PORT from environment variables (Render/Vercel uses PORT)
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -25,16 +27,17 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/medical_a
 // Routes
 app.use('/patient', patientRoutes);
 app.use('/admin', adminRoutes);
-app.use('/auth',authRoutes);
+app.use('/auth', authRoutes);
 // app.use('/api/timeline', timelineRoutes);
 app.use('/api/post', postRoutes);
-app.use('/patient',contactRoutes);
+app.use('/patient', contactRoutes);
 
+// Listen on dynamic port (for Render/Local Development)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+  });
+}
 
-// app.listen(port, () => {
-//   console.log(`Server is running at http://localhost:${port}`);
-// });
-
-
-// Export the server handler for Vercel
+// For Vercel/Serverless, export the app handler (important for Vercel)
 export default app;
