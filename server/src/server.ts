@@ -12,7 +12,7 @@ import contactRoutes from './routes/contactRoutes'
 dotenv.config();
 
 const app = express();
-const port = 5000;
+// const port = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -31,7 +31,10 @@ app.use('/api/post', postRoutes);
 app.use('/patient',contactRoutes);
 
 
+// app.listen(port, () => {
+//   console.log(`Server is running at http://localhost:${port}`);
+// });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+
+// Export the server handler for Vercel
+export default app;
