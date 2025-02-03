@@ -10,7 +10,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const patientRoutes_1 = __importDefault(require("./routes/patientRoutes"));
 const adminRoutes_1 = __importDefault(require("./routes/adminRoutes"));
 const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
-const timelineRoutes_1 = __importDefault(require("./routes/timelineRoutes"));
+// import timelineRoutes from './routes/timelineRoutes';
 const postRoutes_1 = __importDefault(require("./routes/postRoutes"));
 const contactRoutes_1 = __importDefault(require("./routes/contactRoutes"));
 dotenv_1.default.config();
@@ -26,7 +26,7 @@ mongoose_1.default.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017
 app.use('/patient', patientRoutes_1.default);
 app.use('/admin', adminRoutes_1.default);
 app.use('/auth', authRoutes_1.default);
-app.use('/api/timeline', timelineRoutes_1.default);
+// app.use('/api/timeline', timelineRoutes);
 app.use('/api/post', postRoutes_1.default);
 app.use('/patient', contactRoutes_1.default);
 // app.listen(port, () => {

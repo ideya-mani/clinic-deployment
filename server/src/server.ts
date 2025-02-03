@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import patientRoutes from './routes/patientRoutes';
 import adminRoutes from './routes/adminRoutes';
 import authRoutes from './routes/authRoutes';
-import timelineRoutes from './routes/timelineRoutes';
+// import timelineRoutes from './routes/timelineRoutes';
 import postRoutes from './routes/postRoutes';
 import contactRoutes from './routes/contactRoutes'
 
@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/medical_a
 app.use('/patient', patientRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth',authRoutes);
-app.use('/api/timeline', timelineRoutes);
+// app.use('/api/timeline', timelineRoutes);
 app.use('/api/post', postRoutes);
 app.use('/patient',contactRoutes);
 
