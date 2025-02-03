@@ -12,8 +12,6 @@ import contactRoutes from './routes/contactRoutes';
 dotenv.config();
 
 const app = express();
-
-// Use the dynamic PORT from environment variables (Render/Vercel uses PORT)
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -32,12 +30,9 @@ app.use('/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/patient', contactRoutes);
 
-// Listen on dynamic port (for Render/Local Development)
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-  });
-}
+// ✅ Always listen on the port, whether in production or development
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
 
-// For Vercel/Serverless, export the app handler (important for Vercel)
 export default app;
