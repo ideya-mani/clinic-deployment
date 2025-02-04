@@ -5,6 +5,7 @@ import PatientAppointments from '../components/PatientAppointments';
 
 const Contact = () => {
  
+  
   return (
     <Box sx={{ padding: '20px' }}>
       <Box
