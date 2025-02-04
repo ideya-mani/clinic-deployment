@@ -64,12 +64,20 @@ const Header = () => {
       }}
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Link to='/' style={{
+            textDecoration: 'none',
+            color: 'green',
+            fontWeight: 'bold',
+            fontFamily: 'Roboto',
+            fontSize: '16px',
+          }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <img src={logo} alt="logo" style={{ width: 24, height: 24, marginRight: 8 }} />
           <h1 style={{ fontSize: '16px', fontWeight: 'bold', color: 'green' }}>
             Supamandhiraa Homoeo Care
           </h1>
         </Box>
+        </Link>
 
         {isMobile ? (
           <>

@@ -1,7 +1,7 @@
 import { Typography, Box, Divider } from '@mui/material';
 // import { useTranslation } from 'react-i18next';
-import doctorImage from "../assets/portrait-woman-working-healthcare-system-as-pediatrician.jpg"
-import doctorBg from "../assets/top-view-plastic-bottle-with-oil-rosemary.jpg"
+import doctorImage from "../assets/doctor/doctorProfile.webp"
+import doctorBg from "../assets/doctor/doctorBg.webp"
 
 
 const Doctors = () => {
@@ -58,6 +58,7 @@ const Doctors = () => {
         sx={{ 
           width: { xs: "80%", sm: "40%", md: "30%" },
           height: "300px", 
+          objectPosition: "top",
           objectFit: "cover", 
           borderRadius:'24px'
         }}

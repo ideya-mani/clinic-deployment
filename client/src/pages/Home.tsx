@@ -2,12 +2,12 @@ import { Box, styled, Button, CircularProgress } from "@mui/material";
 import AppointmentForm from "../SubComponents/AppointmentForm";
 import Timetable from "../SubComponents/Timetable";
 import ContactSection from "../SubComponents/ContactSection";
-import nameBanner from "../assets/SECONDARY 1-cropped.svg";
-import banner from "../assets/elegant-skin-care-banner-design.jpg";
-import AppointmentBg from "../assets/medical-supplies-near-notebook.jpg";
+import nameBanner from "../assets/home/SECONDARY 1-cropped.svg";
+import banner from "../assets/home/main_banner.webp";
+import AppointmentBg from "../assets/home/appointmentBg.webp";
 
 import { lazy, Suspense, useRef } from "react";
-const Clinic = lazy(() => import("../components/Clinic"));
+const Clinic = lazy(() => import("../components/ClinicMiniCard"));
 const Doctors = lazy(() => import("../components/Doctors"));
 const ImageCarousel = lazy(() => import("../components/imageSlider"));
 

@@ -53,8 +53,8 @@ const ContactForm: React.FC = () => {
     <Box
       sx={{
         boxSizing: "border-box",
+        width: { xs: "100%", sm: "90%", md: "60%" },
         p: "20px",
-        width: '100%',
         borderRadius: "16px",
         backdropFilter: "blur(8px)",
         backgroundColor: "rgba(255, 255, 255, 0.2)",

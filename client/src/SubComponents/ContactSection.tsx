@@ -5,15 +5,11 @@ import {
   Divider,
 } from "@mui/material";
 import { Facebook, Instagram, WhatsApp } from "@mui/icons-material";
-import ContactForm from "./Contentform";
 
 const ContactSection = () => {
 
   return (
     <Box sx={{ padding: "20px", display: "flex", gap: "20px", flexWrap:'wrap', justifyContent:'center' }}>
-      
-      {/* Get in Touch Form */}
-      <ContactForm/>
       
       {/* Contact Info */}
       <Box

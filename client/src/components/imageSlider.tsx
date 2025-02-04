@@ -1,10 +1,10 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import slide1 from '../assets/clinic_images/beautiful-stylish-white-office-successful-doctor.jpg';
-import slide2 from '../assets/clinic_images/patient-getting-chemotherapy-treatment.jpg';
-import slide3 from '../assets/clinic_images/view-luxurious-hotel-interior-space.jpg';
-import slide4 from '../assets/clinic_images/clinic patient.jpg';
-import slide5 from '../assets/clinic_images/clinic room.jpg';
+import slide1 from '../assets/clinic_images/screen_1.webp';
+import slide2 from '../assets/clinic_images/screen_2.webp';
+import slide3 from '../assets/clinic_images/screen_3.webp';
+import slide4 from '../assets/clinic_images/screen_4.webp';
+import slide5 from '../assets/clinic_images/screen_5.webp';
 import { Box } from '@mui/material';
 
 

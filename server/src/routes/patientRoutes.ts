@@ -10,7 +10,7 @@ router.post('/bookappointment', async (req: Request, res: Response) => {
     const newAppointment = new Appointment({
       patientName,
       patientEmail,
-      patientPhone,  // Include the patient's phone number
+      patientPhone,
       doctorName,
       date,
       timePeriod,
@@ -23,14 +23,24 @@ router.post('/bookappointment', async (req: Request, res: Response) => {
   }
 });
 
-// Get all appointments for patient
-router.get('/appointment', async (req: Request, res: Response) => {
-  const { patientEmail } = req.query;
+
+// Get all appointments for a patient (by phone or email)
+router.get("/appointment", async (req: any, res: any) => {
   try {
-    const appointments = await Appointment.find({ patientEmail });
+    const { patientPhone, patientEmail } = req.query;
+
+    if (!patientPhone && !patientEmail) {
+      return res.status(400).json({ message: "Patient phone or email is required" });
+    }
+
+    const query: any = {};
+    if (patientPhone) query.patientPhone = patientPhone;
+    if (patientEmail) query.patientEmail = patientEmail;
+
+    const appointments = await Appointment.find(query);
     res.json({ appointments });
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching appointments' });
+    res.status(500).json({ message: "Error fetching appointments", error });
   }
 });
 
